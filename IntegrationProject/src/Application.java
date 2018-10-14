@@ -77,6 +77,63 @@ public class Application {
 		System.out.println("This is the sqare root of a random generated number from 0 to 100: " + powerNum );
 		// The block of code above uses a method that I created which generates a number
 		//from zero to 100 and then uses the square root method from the math class to take the square root of that random number and prints that value
+		
+		int bankAccount = 1500;
+		 if (bankAccount > 1000) {
+			System.out.println("Do not enter panic mode yet");
+			
+		}
+		
+		 if(bankAccount <= 1000) {
+			System.out.println("Time to panic");
+		}
+		 
+		 if (bankAccount == 2000) {
+			 System.out.println("Let's go to the mall!");
+		 }
+		 
+		 int numberOfHoursPlayingGames = 1;
+		 System.out.println("I played " + numberOfHoursPlayingGames + 
+	     " " + (numberOfHoursPlayingGames==1 ? "hour" : "hours") );
+		 
+		 String stanceOnAnime;
+		 String nameOfAnime = "Naruto Shippuden";
+		 switch (nameOfAnime) {
+		 case "Naruto Shippuden":
+			 stanceOnAnime = "Naruto is my favorite anime of all time";
+				System.out.println(stanceOnAnime);
+		     break;
+		 case "Attack on Titan":
+			 stanceOnAnime = "Attack on Titan is a great dark anime";
+				System.out.println(stanceOnAnime);
+			 break;
+		 case "My Hero Academia":
+			 stanceOnAnime = "My Hero Acadmia is a fantastic anime and it has potential to be one of the best of all time";
+				System.out.println(stanceOnAnime);
+			 break;
+		default:
+			System.out.println("Invalid");
+		
+		 }
+		 
+		double x = 5, y = 10, f = 15, z = 20 ;
+		System.out.println(x * y);
+		System.out.println(x + y);
+		System.out.println(x / y);
+		System.out.println(x - y);
+		System.out.println(x % y);
+		System.out.println(++f);
+		System.out.println(--x);
+		System.out.println(z += y);
+		
+		String a1 = "Naruto";
+		String a2 = "Bleach";
+		String a3 = "Naruto";
+		System.out.println(a1.compareTo(a2));
+		System.out.println(a1.equals(a3));
+		// == is different than the equals method above 
+		// == compares the the objects location whereas the equals method compares the values
+		// Operator precedence determines the grouping of terms in an expression and affects how an expression is evaluated
 	}
 		public static int max(int number1, int number2) { //Here the method is being declared, also called the method header, and inside the parenthesis are the parameters
 			int result;
