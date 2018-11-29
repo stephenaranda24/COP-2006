@@ -189,20 +189,40 @@ public class Application {
     System.out.println("This is a do-while loop");
 
     Test myPersonalInfo = new Test();
-    myPersonalInfo.setName("Stephen Aranda");
+    myPersonalInfo.setName("Stephen Alexander Aranda");
     myPersonalInfo.setHeight(1.73);
     myPersonalInfo.setHobby("watching anime and playing Xbox");
 
     System.out.println("My full name is " + myPersonalInfo.getName());
     System.out.println("I am " + myPersonalInfo.getHeight() + " meters tall.");
     System.out.println("My favorite hobbies are " + myPersonalInfo.getHobby());
-    
+
     Test c1 = new Test("Naruto Uzumaki");
     Test c2 = new Test();
     System.out.println(c1.getAnimename());
     System.out.println(c2.getAnimename());
+
+    anime stephen[] = new anime[1];
+    stephen[0] = new souleater();
+    for (int ani = 0; ani < 1; ++ani) {
+      stephen[ani].watch();
+    }
+    // the code above uses polymorphism since it uses arrays
+    // to call the watch method from the souleater class which is inherited from the anime class
+
+    attackontitan show = new attackontitan();
+    show.goodanime();
+    //this code uses the super keyword to determine
+    //which nameofanime string it prints in the child classes tokyoghoul and attackontitan which are both in the parent class named anime
+    
+    videogames favoritegame = new videogames("Fallout 76 is currently my favorite video game");
+    favoritegame.play();
+    //the code above uses the this keyword to indicate that the
+    //x variable inside the videogames constructor is equal to the global variable with the same name in the videogames class
+    
+    
   }
-  //
+
 
   public static int max(int number1, int number2) { // Here the method is being declared, also
                                                     // called the method header, and inside the
