@@ -1,4 +1,6 @@
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class Application {
 
@@ -212,18 +214,84 @@ public class Application {
 
     attackontitan show = new attackontitan();
     show.goodanime();
-    //this code uses the super keyword to determine
-    //which nameofanime string it prints in the child classes tokyoghoul and attackontitan which are both in the parent class named anime
-    
+    // this code uses the super keyword to determine
+    // which nameofanime string it prints in the child classes tokyoghoul and attackontitan which
+    // are both in the parent class named anime
+
     videogames favoritegame = new videogames("Fallout 76 is currently my favorite video game");
     favoritegame.play();
-    //the code above uses the this keyword to indicate that the
-    //x variable inside the videogames constructor is equal to the global variable with the same name in the videogames class
+    // the code above uses the this keyword to indicate that the
+    // x variable inside the videogames constructor is equal to the global variable with the same
+    // name in the videogames class
+
+    videogames goatgame =
+        new videogames("The Legend of Zelda: Ocarina of Time is the greatest game of all time");
+    goatgame.play();
+
+    int[] intArray = new int[2];
+    intArray[0] = 21;
+    intArray[1] = 12;
+    System.out.println(intArray.length);
+    array minimum = new array();
+    int min = array.getMinValue(intArray);
+    System.out.println(min);
+    // a get method was created using a for loop which runs through the array and get the lowest
+    // value
+
+    int sum = 0;
+    for (int i = 0; i < intArray.length; i++) {
+      sum += intArray[i];
+
+    }
+    System.out.println(sum);
+
+    int sum1 = 0;
+    for (int i : intArray) {
+      sum1 += i;
+
+    }
+    System.out.println(sum1);
+    // the code above are two different ways to calculate the sum of an integer
+    // array using an enhanced for loop to loop through the array
+
+
+    String[] stringArray = {"hello", "goodbye"};
+    System.out.println((Arrays.asList(stringArray).indexOf("hello")));
+    // the code above uses a array of two strings, converts it to a list, and uses the indexOf
+    // method to find the index of the word hello
+    // which in this case is 0
+
+    ArrayList<String> citieslivedin = new ArrayList<String>();
+    citieslivedin.add("Redwood City");
+    citieslivedin.add("Mt. Pocono");
+    citieslivedin.add("Cape Coral");
+    System.out.println(citieslivedin);
+    // An array list was created here in which it holds the cities I have lived in before
+
+    Integer[][] twoDarray = {{1, 21}, {25, 101 , 202, 1000}};
+    System.out.println(twoDarray[0].length);
+    System.out.println(twoDarray[1].length);
+    System.out.println((Arrays.asList(twoDarray[1]).indexOf(101)));
+    // the code above declares, instantiates, and uses a multi-dimensional array which in this case is two dimensional
+    //the indexOf method is used here to search for the index of the value from the second set of numbers
     
-    
+    Scanner input = new Scanner (System.in);
+    try {
+    System.out.println("Enter first number:");
+    int number1 = input.nextInt();
+    System.out.println("Enter second number:");
+    int number2 = input.nextInt();
+    int sum2 = number1 / number2 ;
+    System.out.println(sum2);
+    input.close();
+    }
+    catch(Exception s) {
+      System.out.println("You cannot do that silly");
+    }
+    //the code above uses exception handling so that if a user tries to divide by zero it prints 
+    //you cannot do that instead of crashing the entire program
+    //'Exception' inside the catch keyword with a letter next to it is the most broad exception case
   }
-
-
   public static int max(int number1, int number2) { // Here the method is being declared, also
                                                     // called the method header, and inside the
                                                     // parenthesis are the parameters
