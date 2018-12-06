@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Application {
+public class Application extends Test {
 
   public static void main(String[] args) {
     // Stephen Aranda
@@ -201,14 +201,19 @@ public class Application {
 
     Test c1 = new Test("Naruto Uzumaki");
     Test c2 = new Test();
+    Test c3 = new Test();
     System.out.println(c1.getAnimename());
     System.out.println(c2.getAnimename());
+    c3.twofavoritesports("Football is my favorite sport", "My second favorite sport is basketball");
+
 
     anime stephen[] = new anime[1];
     stephen[0] = new souleater();
     for (int ani = 0; ani < 1; ++ani) {
       stephen[ani].watch();
     }
+    // inheritance is a mechanism wherein a new class is derived from an already existing class
+    // it is useful because you can make your code more readable by minimizing the amount of duplicate code
     // the code above uses polymorphism since it uses arrays
     // to call the watch method from the souleater class which is inherited from the anime class
 
@@ -268,30 +273,33 @@ public class Application {
     System.out.println(citieslivedin);
     // An array list was created here in which it holds the cities I have lived in before
 
-    Integer[][] twoDarray = {{1, 21}, {25, 101 , 202, 1000}};
+    Integer[][] twoDarray = {{1, 21}, {25, 101, 202, 1000}};
     System.out.println(twoDarray[0].length);
     System.out.println(twoDarray[1].length);
     System.out.println((Arrays.asList(twoDarray[1]).indexOf(101)));
-    // the code above declares, instantiates, and uses a multi-dimensional array which in this case is two dimensional
-    //the indexOf method is used here to search for the index of the value from the second set of numbers
-    
-    Scanner input = new Scanner (System.in);
+    // the code above declares, instantiates, and uses a multi-dimensional array which in this case
+    // is two dimensional
+    // the indexOf method is used here to search for the index of the value from the second set of
+    // numbers
+
+    Scanner input = new Scanner(System.in);
     try {
-    System.out.println("Enter first number:");
-    int number1 = input.nextInt();
-    System.out.println("Enter second number:");
-    int number2 = input.nextInt();
-    int sum2 = number1 / number2 ;
-    System.out.println(sum2);
-    input.close();
-    }
-    catch(Exception s) {
+      System.out.println("Enter first number:");
+      int number1 = input.nextInt();
+      System.out.println("Enter second number:");
+      int number2 = input.nextInt();
+      int sum2 = number1 / number2;
+      System.out.println(sum2);
+      input.close();
+    } catch (Exception s) {
       System.out.println("You cannot do that silly");
     }
-    //the code above uses exception handling so that if a user tries to divide by zero it prints 
-    //you cannot do that instead of crashing the entire program
-    //'Exception' inside the catch keyword with a letter next to it is the most broad exception case
+    // the code above uses exception handling so that if a user tries to divide by zero it prints
+    // you cannot do that instead of crashing the entire program
+    // 'Exception' inside the catch keyword with a letter next to it is the most broad exception
+    // case
   }
+
   public static int max(int number1, int number2) { // Here the method is being declared, also
                                                     // called the method header, and inside the
                                                     // parenthesis are the parameters
@@ -306,4 +314,5 @@ public class Application {
 
   }
 
-};
+
+}

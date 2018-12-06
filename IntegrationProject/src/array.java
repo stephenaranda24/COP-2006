@@ -9,6 +9,6 @@ public class array {
     }
     return minValue;
   }
-
+  // the code above is a method which gets the minimum value in the stated array list
 
 }
