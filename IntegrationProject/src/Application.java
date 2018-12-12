@@ -213,7 +213,8 @@ public class Application extends Test {
       stephen[ani].watch();
     }
     // inheritance is a mechanism wherein a new class is derived from an already existing class
-    // it is useful because you can make your code more readable by minimizing the amount of duplicate code
+    // it is useful because you can make your code more readable by minimizing the amount of
+    // duplicate code
     // the code above uses polymorphism since it uses arrays
     // to call the watch method from the souleater class which is inherited from the anime class
 
@@ -282,6 +283,26 @@ public class Application extends Test {
     // the indexOf method is used here to search for the index of the value from the second set of
     // numbers
 
+    int xcords = 0, ycords = 0;
+    for (int i = 0; i < twoDarray.length; i++) {
+      for (int j = 0; j < twoDarray[0].length; j++) {
+        if (twoDarray[i][j] == 101) {
+          xcords = i;
+          ycords = j;
+        }
+      }
+
+    }
+
+    System.out.println("The x and y coordinates of 101 are: (" + xcords + "," + ycords + ")");
+    // the code above uses for loops and an if statement to loop through the two dimensional array
+    // and find the coordinates of the designated location
+
+
+    int[] luckyNumbers = new int[] {14, 7, 22, 24};
+    System.out.println("Index of 22 is: " + findIndexof(luckyNumbers, 22));
+
+
     Scanner input = new Scanner(System.in);
     try {
       System.out.println("Enter first number:");
@@ -298,6 +319,7 @@ public class Application extends Test {
     // you cannot do that instead of crashing the entire program
     // 'Exception' inside the catch keyword with a letter next to it is the most broad exception
     // case
+
   }
 
   public static int max(int number1, int number2) { // Here the method is being declared, also
@@ -313,6 +335,25 @@ public class Application extends Test {
 
 
   }
+
+
+  public static int findIndexof(int[] luckyNumbers, int z) {
+    if (luckyNumbers == null)
+      return -1;
+    int leng = luckyNumbers.length;
+    int i = 0;
+    while (i < leng) {
+      if (luckyNumbers[i] == z)
+        return i;
+      else
+        i = i + 1;
+    }
+    return -1;
+
+  }
+  // the method above is a method I created to loop through the one dimensional array called
+  // luckyNumbers
+  // and returns the index of the element when it is called
 
 
 }
